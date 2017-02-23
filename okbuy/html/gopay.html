@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../libs/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="../libs/gopay.js"></script>
+ 	<script type="text/javascript" src="../libs/public.js"></script>
+	<link rel="stylesheet" href="../css/gopay.css">
+	<link rel="stylesheet" href="../css/public.css">
+</head>
+<body>
+<!--                              head                                   -->
+
+	<div id="head"></div>
+	<div id="search"></div>
+	<div id="nav"></div>
+
+
+	<!-- 购物列表 -->
+	<div id="gopay">
+		<div id="h1"><h1>我的购物车</h1></div>
+		<div id="biaotou">
+			<ul>
+				<li style="width:110px"><p></p><span>全选</span></li>
+				
+
+				<li style="width:470px">商品名称</li>
+				<li style="width:110px">单价</li>
+				<li style="width:240px">数量</li>
+				<li style="width:110px">小计</li>
+				<li style="width:130px">操作</li>
+			</ul>
+		</div>
+		<!-- 商品 -->
+		<div id="wupin">
+<!-- 			<dl>
+			<div id="tj">
+				<p class="tj">特价</p>
+			</div>
+			<p  ></p>
+			<dt>
+				<a href="detail.html" id=""><img src="" alt=""></a>
+			</dt>
+			<dd class="d1"><a href="detail.html" id=""><b>Adidas阿迪达斯男式竞技表现系列缓震耐磨透气网球鞋</a></b><br>
+			<span>尺码：</span>40</dd>
+			<dd class="d2" style="width:110px">¥599</dd>
+			<dd class="d3" style="width:240px">
+				<div id="jiajian"><span>-</span><i>0</i><span>+</span>
+				</dd>
+			<dd class="d4" style="width:110px">¥599</dd>
+		
+			<dd class="d5" style="width:130px">
+			
+			<input type="button" value="删除">
+			</dd>
+		</dl>
+		 -->		
+		</div>
+
+	<div id="gotopaynum">
+			<ul>
+				<li style="width:110px"><p></p><span>全选</span></li>
+				
+
+				<li style="width:150px" class="l1">删除所选商品</li>
+				<li style="width:100px" class="l2">商品数量：<span>1</span></li>
+				<li style="width:150px" class="l3">商品金额：¥<span>0</span></li>
+				<li style="width:260px" class="l4">合计(不含运费)：¥<span>0</span></li>
+				<li style="width:180px" class="l5">去结算</li>
+			</ul>
+	</div>
+
+	</div>
+
+
+
+
+
+
+
+<!--                                message                                   -->
+	<div id="messagebox"></div>
+	<div id="foot"></div>
+	<div id="returntop"></div>
+
+
+	<script>
+
+	$(function(){
+		// 引入公共样式
+			$('#head').load('../html/public.html #head')
+			$('#search').load('../html/public.html #search')
+			$('#nav').load('../html/public.html #nav')
+			$('#messagebox').load('../html/public.html #messagebox')
+			$('#foot').load('../html/public.html #foot')
+			$('#returntop').load('../html/public.html #returntop')	
+
+	})
+
+	</script>	
+</body>
+</html>

@@ -1,0 +1,91 @@
+[
+
+{"name":"儿童导购",
+
+	"tip1":"男装",
+		"children1":[
+			{"name":"Polo衫","href":"#"},
+			{"name":"衬衫","href":"#"},
+			{"name":"卫衣","href":"#"},
+			{"name":"速干衣","href":"#"},
+			{"name":"皮肤衣","href":"#"},
+			{"name":"短裤速","href":"#"},
+			{"name":"干裤","href":"#"},
+			{"name":"休闲裤","href":"#"},
+			{"name":"冲锋裤","href":"#"},
+			{"name":"三合一冲锋衣","href":"#"},
+			{"name":"羽绒服/棉服","href":"#"}
+			],
+
+	"tip2":"男装",
+		"children2":[
+			{"name":"Polo衫","href":"#"},
+			{"name":"衬衫","href":"#"},
+			{"name":"卫衣","href":"#"},
+			{"name":"速干衣","href":"#"},
+			{"name":"皮肤衣","href":"#"},
+			{"name":"短裤速","href":"#"},
+			{"name":"干裤","href":"#"},
+			{"name":"休闲裤","href":"#"},
+			{"name":"冲锋裤","href":"#"},
+			{"name":"三合一冲锋衣","href":"#"},
+			{"name":"羽绒服/棉服","href":"#"}
+			]
+
+},
+
+{"name":"年龄导购",
+
+	"tip1":"男装",
+		"children1":[
+			{"name":"Polo衫","href":"#"},
+			{"name":"衬衫","href":"#"},
+			{"name":"卫衣","href":"#"},
+			{"name":"速干衣","href":"#"},
+			{"name":"皮肤衣","href":"#"},
+			{"name":"短裤速","href":"#"},
+			{"name":"干裤","href":"#"},
+			{"name":"休闲裤","href":"#"},
+			{"name":"冲锋裤","href":"#"},
+			{"name":"三合一冲锋衣","href":"#"},
+			{"name":"羽绒服/棉服","href":"#"}
+			]
+
+
+
+},
+
+{"name":"品牌导购",
+		
+		"sur":"../images/n4.png",
+		"children":[
+			{"title":"NIKE","href":"#"},
+			{"title":"NIKE","href":"#"},
+			{"title":"NIKE","href":"#"},
+			{"title":"NIKE","href":"#"},
+			{"title":"NIKE","href":"#"},
+			{"title":"NIKE","href":"#"},
+			{"title":"NIKE","href":"#"},
+			{"title":"NIKE","href":"#"},
+			{"title":"NIKE","href":"#"},
+			{"title":"NIKE","href":"#"},
+			{"title":"NIKE","href":"#"},
+			{"title":"NIKE","href":"#"},
+			{"title":"NIKE","href":"#"},
+			{"title":"NIKE","href":"#"},
+			{"title":"NIKE","href":"#"},
+			{"title":"NIKE","href":"#"},
+			{"title":"NIKE","href":"#"},
+			{"title":"NIKE","href":"#"},
+			{"title":"NIKE","href":"#"},
+			{"title":"NIKE","href":"#"},
+			{"title":"NIKE","href":"#"},
+			{"title":"NIKE","href":"#"}
+			]
+
+
+}
+
+
+
+]

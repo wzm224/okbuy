@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>刘孟杰</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="../css/login.css">
+	<script src="../libs/jquery-1.11.3.js"></script>
+	<script>
+
+
+$(function(){
+		//alert(1)
+	$('#btn').click(function(){
+
+		//alert(1) //11
+		//console.log($('#user').val().length);	//	判断是否输入了内容
+
+		if ($('#user').val().length==0) {
+			$('#user').next().css("opacity","1")
+		}else{
+			$('#user').next().css("opacity","0")
+		}
+
+		if ($('#password').val().length==0) {
+			$('#password').next().css("opacity","1")
+		}else{
+			$('#password').next().css("opacity","0")
+		}
+
+	});
+
+/////////////验证登陆
+	$('#btn').click(function(){
+		//alert(1)
+
+		var ID = $('#user').val();
+		var password = $('#password').val();
+		//console.log(ID+":"+password);
+		$.ajax({
+			url:"http://datainfo.duapp.com/shopdata/userinfo.php",
+			type:"POST",
+			data:{
+				status:"login",
+				userID:ID,
+				password:password
+			},
+			success:function(res){
+
+				switch(res){
+					case "0":alert('用户名不存在');break;
+					case "2":alert('用户名密码不符');
+					break;
+					default:console.log(res);alert('登陆成功');
+
+					sessionStorage.setItem("userid",ID)
+					window.location.href="index.html"
+
+					break;
+				}
+			}
+
+		})
+
+	})
+
+
+	
+})
+	</script>
+
+</head>
+<body>
+<!--                               top                                   -->
+	<div id="top">
+		<a href="index.html"><img src="../login/images/minilogo.png" alt=""></a>
+		<p>
+			<a href="login.html" style="border:none">登录</a>
+			<a href="register.html">注册</a>
+			<a href="">我的账户</a>
+			<a href="" class="help">帮助</a>
+		</p>
+	</div>
+<!--                               main                                   -->
+<div id="main">
+	<div id="img">
+		<a href=""><img src="../login/images/login.jpg" alt=""></a>
+	</div>
+	<div id="right">
+		<form action="">
+			<p><span>该用户名不存在</span></p>
+			<p>邮箱/已验证手机/用户名</p>
+			<!-- 用户 -->
+			<input type="text" id="user">
+			<span style="color:red">请填写邮箱/已验证手机/用户名</span>
+			<p>密码：</p>
+					<!-- 密码 -->
+			<input type="password" id="password">
+			<span style="color:red">请填写密码</span>
+			<p>忘记密码？</p>
+			<div id="btndiv">
+
+			<input type="button" id="btn">
+			<span  class="btnnext"><a href="">没有好乐买账号，十秒注册</a></span>
+			</div>
+		</form>
+		<div id="icon">
+			<span>您还可以用这些网站的账号登录好乐买：</span>
+			<a href=""><img src="../login/images/1.gif" alt="开心网"></a>
+			<a href=""><img src="../login/images/2.gif" alt="QQ"></a>
+			<a href=""><img src="../login/images/3.gif" alt="新浪微博"></a>
+			<a href=""><img src="../login/images/4.gif" alt="支付宝"></a>
+		</div>
+	</div>
+</div>
+<!--                               foot                                   -->
+<div id="foot">
+	<span>Copyright © 2007-2016 OkBuy.com All Rights Reserved           天津好乐买信息技术有限公司  津B2-20140020  京公网安备 110105006859</span>	
+</div>
+
+</body>
+</html>

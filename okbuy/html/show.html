@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>刘孟杰</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="../css/public.css">
+	<link rel="stylesheet" href="../css/show.css">	
+	<script src="../libs/jquery-1.11.3.js"></script>
+	<script src="../libs/jquery.cookie.js"></script>
+	<script src="../libs/jquery.pagination.js"></script>
+	<script type="text/javascript" src="../libs/show.js"></script>
+	<!-- 分页和cookie插件 -->
+	<!-- 公共样式 -->
+ 	<script type="text/javascript" src="../libs/public.js"></script>
+	 	
+	<script>
+
+	</script>
+</head>
+<body>
+<div id="head"></div>
+<div id="search"></div>
+<div id="nav"></div>
+<!--                               商品列表的选择栏                       -->	
+	<div id="choose">
+		<div id="choosed">
+			<p>您选择的：</p>
+				<b>
+					<i>男</i>
+					<input type="button" value="X">
+				</b>
+		</div>
+		<div>
+			<p>性别：</p>
+				<span><a href="">全部</a></span>
+			<ul>
+				<li><a href="">男</a></li>
+				<li><a href="">女</a></li>
+			</ul>
+		</div>
+		<div>
+			<p>分类：</p>
+				<span><a href="">全部</a></span>
+
+			<ul>
+				<li><a href="">服装</a></li>
+				<li><a href="">运动服</a></li>
+				<li><a href="">夹克/外套/衬衫</a></li>
+				<li><a href="">运动套装</a></li>
+				<li><a href="">运动卫衣/套头衫</a></li>
+				<li><a href="">运动长裤</a></li>
+				<li><a href="">运动短裤</a></li>
+				<li><a href="">运动T恤</a></li>
+			</ul>
+			
+		</div>
+		<div>
+			<p>品牌：</p>
+			<span><a href="">全部</a></span>
+			<ul>
+				<li><a href="">耐克</a></li>
+				<li><a href="">阿迪达斯</a></li>
+				<li><a href="">乔丹</a></li>耐克
+				<li><a href="">鸿星尔克</a></li>
+				<li><a href="">361°</a></li>
+				<li><a href="">贵人鸟</a></li>
+				<li><a href="">特步</a></li>
+				<li><a href="">李宁</a></li>
+				<li><a href="">NEW BALANCE</a></li>
+				<li><a href="">匹克</a></li>
+				<li><a href="">安踏</a></li>
+				<li><a href="">阿迪运动生活</a></li>
+				<li><a href=""></a>卡帕</li>
+				<li><a href=""></a>德尔惠</li>
+				<li><a href=""></a></li>
+			</ul>
+
+		</div>
+		<div id="color">
+			<p>颜色：</p>
+			<span><a href="">全部</a></span>
+			<ul>
+				<a href=""><div id=""></div></a>
+			</ul>			
+		</div>
+		<div id="price">
+			<p>价格：</p>
+			<input type="text" placeholder="¥">
+			<i>-</i>
+			<input type="text" placeholder="¥">
+			<input type="button" style="text-indent:0" value="确定" id="pricebtn">
+		</div>	
+		</div>
+	</div>	
+<!--                           商品列表                              -->
+
+<!--                          商品排列顺序                           -->	
+	<div id="show">
+		<div id="showchoose">
+			<a href="##">默认</a>
+			<a href="##">价格</a>
+			<a href="##">销量</a>
+			<a href="##">最新</a>
+			<p>
+			共找到<i>529</i>个商品
+			<span><</span><i>1</i>/14页<span>></span>
+		    </p>
+		</div>
+<!--                          商品                                   -->
+		<ul id="shows">
+		</ul>
+	</div>
+<!--                            分页按钮                               -->
+
+    <div id="Pagination" class="pagination"></div>
+
+
+
+<!--                             精彩推荐                              -->
+	<div id="jctitle"><img src="../show/images/jc.gif" alt=""></div>
+	<div id="jccontent">
+		<a href=""><img src="../show/images/jc1.jpg" alt=""></a>
+		<a href=""><img src="../show/images/jc2.jpg" alt=""></a>
+		<a href=""><img src="../show/images/jc3.jpg" alt=""></a>
+		<a href=""><img src="../show/images/jc4.jpg" alt=""></a>
+		<a href=""><img src="../show/images/jc5.png" alt=""></a>
+		<a href=""><img src="../show/images/jc6.png" alt=""></a>
+	</div>
+	<div id="pic">
+		<a href=""><img src="../show/images/jcx.png" alt=""></a>
+		<ul><a href==""></a></ul>
+	</div>
+
+	<div id="messagebox"></div>
+	<div id="foot"></div>
+	<div id="returntop"></div>
+	<script>
+
+	$(function(){
+		// 引入公共样式
+			$('#head').load('../html/public.html #head')
+			$('#search').load('../html/public.html #search')
+			$('#nav').load('../html/public.html #nav')
+			$('#messagebox').load('../html/public.html #messagebox')
+			$('#foot').load('../html/public.html #foot')
+			$('#returntop').load('../html/public.html #returntop')	
+
+	})
+
+	</script>	
+</body>
+</html>

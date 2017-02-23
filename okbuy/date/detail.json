@@ -1,0 +1,36 @@
+[
+
+
+{	
+	"id":"0",
+	"pic":"../detail/images/sx.jpg",
+	"name":"Converse匡威",
+	"sex":"男式",
+	"traits":"休闲宽松剪裁舒适纯色运动外套09137C035",
+	"price":"169",
+	"oldprice":"499",
+	"discount":"3.4折",
+	"active":"特价",
+	"activetime":"秋品盛典-【9/12-9/18】",
+	"color":[{"color":"../detail/images/sx.jpg"},{"color":"../detail/images/sx.jpg"}],
+	"size":[{"siaz":"L"},{"siaz":"M"},{"siaz":"S"},
+			{"siaz":"XL"},{"siaz":"XXL"}]
+},
+
+{	
+	"id":"1",
+	"pic":"../detail/images/hs.png",
+	"name":"Converse匡威",
+	"sex":"男式",
+	"traits":"休闲宽松剪裁舒适纯色运动外套09137C035",
+	"price":"269",
+	"oldprice":"499",
+	"discount":"3.4折",
+	"active":"特价",
+	"activetime":"秋品盛典-【9/12-9/18】",
+	"color":[{"color":"../detail/images/hs.png"},{"color":"../detail/images/hs.png"}],
+	"size":[{"siaz":"L"},{"siaz":"M"},{"siaz":"S"},
+			{"siaz":"XL"},{"siaz":"XXL"}]
+}
+
+]

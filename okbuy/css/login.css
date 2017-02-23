@@ -1,0 +1,115 @@
+/*css document*/
+*{margin: 0;padding: 0;}
+body,html{font-size: 13px;font-family: Arial,SimSun,Helvetica,sans-serif;}
+ul,dl,li,ol{list-style-type: none;}
+a{text-decoration: none;}
+img{border: none;}
+
+/*                                 top                                     */
+#top{
+	width: 990px;
+	height: 65px;
+	margin: 0 auto;
+	border-bottom: 2px solid #dc5751; 
+}
+#top img{
+	float: left;
+}
+#top p{
+	width: 230px;
+	float: right;
+	margin-top:35px; 
+}
+#top p a{
+	height: 12px;
+	display: block;
+	float: left;
+	font-size: 13px;
+	color: #666666;
+	padding: 0 10px;
+	border-left:1px solid #666666;
+}
+#top p a:hover{
+	color: red;
+}
+#top .help{
+	border-left: none;
+	margin-left:15px; 
+}
+/*                                 main                                   */
+#main{
+	width: 1000px;
+	height: 590px;
+	margin: 0 auto;
+}
+#img{
+	float: left;
+}
+#right{
+	float: left;
+}
+#main form{
+	float: left;
+	padding: 60px 0 0 60px;
+}
+#main form span{
+	color: red;
+	opacity: 0;
+}
+
+#user,#password{
+	width: 280px;
+	height: 35px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+#btn{
+	width: 135px;
+	height: 47px;float: left;
+	margin:65px 0 20px 0; 
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	cursor: pointer;
+	background: url(../login/images/btn.jpg) center;
+}
+#main form .btnnext a{
+	background: #ecf7ef;width: 160px;height: 25px;
+	color: green;display: block;float: left;
+	margin-top:75px; opacity: 1;font-size: 13px;
+	margin-left:5px; 
+}
+
+#main{
+	font-size: 15px;
+	color: #676767;
+	line-height: 30px;
+}
+
+#icon{
+	width: 305px;
+	height: 111px;
+	clear: both;
+	border-top: 2px solid #dbdbdb;
+	margin-left:60px; 
+}
+#icon span{
+	line-height: 40px;
+	font-size: 13px;
+	color: #999999;
+}
+/*                                      foot                      */
+#foot{
+	clear: both;
+	width: 790px;
+	height: 30px;
+	margin: 0 auto;
+	background: #f2f2f2;
+}
+#foot span{
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 30px;
+	color: #999999;
+}

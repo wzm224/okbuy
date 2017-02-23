@@ -1,0 +1,86 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<meta name="author" content="http://www.softwhy.com/" /> 
+<title>蚂蚁部落</title> 
+
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.6.4/jquery.js"></script> 
+<script type="text/javascript">  
+// 1.$(document).ready(function(){})，当文档结构完全加载完毕再去执行函数中的代码。
+// 2.setInterval(function(){},100)，定时器函数每隔100毫秒调用一次函数，这个很重要，100毫秒时间间隔很重要，这样可以让倒计时精确到秒的下一个单位，当然其实也不是毫秒，如果真的要是以毫秒间隔的话，那么间隔时间就1。
+// 3.$(".time_wrap").each(function(){})，获取并遍历class属性值为time_wrap元素。
+// 4.var Obj = this，将当前对象的this引用赋值给变量Obj。
+// 5.var EndTime = new Date(parseInt($(Obj).attr('value')) * 1000)，$(Obj).attr('value')获取元素的value属性值，这个属性值是秒，所以这里将其转换为毫秒，然后生成一个时间对象，这个时间对象表示的具体时间就是倒计时的目标时间点。
+// 6.var NowTime = new Date()，获取当前时间对象。
+// 7.var nMS=EndTime.getTime() - NowTime.getTime()，获取时间戳的之差。
+// 8.var nD=Math.floor(nMS/(1000 * 60 * 60 * 24))，获取天数，这个Math.floor()函数是进行下舍入操作，也很重要，因为在计算的时候很可能会有"零头"，那么这个零头就舍去。
+// 9.var nH=Math.floor(nMS/(1000*60*60)) % 24，获取倒计时的小时数,这里的技巧也很重要，nMS/(1000*60*60)这个可以获取终点时间和当前时间相差小时数，然后使用Math.floor()函数进行下舍入，最后与24求余，这个余数就是倒计时的小时。
+// 10.if(nD>= 0){         
+//   var str = '<span class="timer" >'+nD+'天'+nH+'小时'+nM+'分'+nS+'.'+nMS+'秒';    
+//   $(Obj).html(str);    
+// }
+// 如果nd大于等于，则显示倒计时，否则不显示。
+
+
+
+$(document).ready(function(){ 
+
+ function daojishi(){
+
+    //var list=document.getElementById('list')
+
+    //var sometime=list.getElementsByClassName('sometime')[i]
+    var nian=$('.nian').html()//tian
+    var yue=$('.yue').html();//yue 
+    var day=$('.day').html();//天
+    var hour=$('.hour').html()//小时
+    var minute=$('.minute').html();//分钟
+    var timer;
+
+    //console.log(day)
+
+    var d2=new Date(''+nian+'/'+yue+'/'+day+' '+hour+':'+minute+':00').getTime();
+
+    timer=setInterval(function(){         
+
+
+        var NowTime = new Date(); 
+
+        //console.log(d2-NowTime.getTime());   
+        var nMS=d2 - NowTime.getTime();    
+        var nD=Math.floor(nMS/(1000 * 60 * 60 * 24))%24;    
+        var nH=Math.floor(nMS/(1000*60*60)) % 24;    
+        var nM=Math.floor(nMS/(1000*60)) % 60;    
+        var nS=Math.floor(nMS/1000) % 60;    
+        var nMS=Math.floor(nMS/100) % 10;  
+
+        if(nD>= 0){         
+          var str = '<span class="timer" >'+nD+'天'+nH+'小时'+nM+'分'+nS+'秒'+nMS;    
+          $('span').html(str);    
+        }else{
+          clearInterval(timer)
+        }         
+          
+    }, 100);
+
+
+ } 
+    daojishi()
+
+}); 
+</script>
+</head> 
+<body> 
+<span></span>
+
+  <span class="sometime">
+    <span class="nian">2016</span>
+    <span class="yue">9</span>
+    <span class="day">24</span>
+    <span class="hour">3</span>
+    <span class="minute">3</span>
+  </span>
+
+</body> 
+</html> 

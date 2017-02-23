@@ -1,0 +1,23 @@
+1.首页。  >>> 点击跳转 商品列表。
+
+2.商品列表。  >>> 点击跳转商品详情。
+
+3.商品详情。>>> 购买流程。购物车
+
+4.购物车。 >>>> 在商品项上添加购物车功能。
+
+5.登陆注册  >>> 与主页之间的关系。
+
+6.活动页。* >>> 能力拓展。
+
+
+
+特效：
+
+	-webkit-transition:all 0.5s ease-in-out;
+			-moz-transition:all 1s ease-in-out;
+
+	transform:scale(1.2);
+			box-shadow: 2px 2px 5px #b6b6b6;
+
+			transform:rotate(180deg);

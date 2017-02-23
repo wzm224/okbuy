@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>刘孟杰</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="../css/register.css">
+	<script src="../libs/jquery-1.11.3.js"></script>
+	<script>
+	$(function(){
+
+		//手机号正则验证
+		 var  arr=[0,0,0]
+       $('#phone').blur(function(){
+       	//alert(1)   //  11
+       	var str=$(this).val()
+       	//console.log(str)
+       	if (str.length==0) {
+       		$('form').find('span').eq(0).css("display","block")
+       	}else{
+       		$('form').find('span').eq(0).css("display","none")
+       		var reg=/^[1]\d{10}$/
+	       	if (reg.test(str)) {
+	       		$('.biaodan').find('img').eq(0).css("display","block");
+	       		arr[0]=1;
+	       	}else{
+	       		$('form').find('span').eq(1).css("display","block")
+	       	}
+
+       	}
+
+       	})
+
+       //console.log($('form').find('span').length)  //6个span
+       //点击出现密码要求，清空之前的提示
+       $('#password').click(function(){
+       		$('form').find('span').eq(2).css("display","block")
+       		$('form').find('span').eq(3).css("display","none")
+       		$('form').find('span').eq(4).css("display","none")
+
+       })
+
+       //密码正则验证
+       $('#password').blur(function(){
+
+       		var str=$(this).val()
+       		if (str.length==0) {
+       		    $('form').find('span').eq(2).css("display","none")
+ 	       		$('form').find('span').eq(3).css("display","block")      			
+       		}else{
+       			$('form').find('span').eq(2).css("display","none")
+       			$('form').find('span').eq(3).css("display","none")
+
+		       	var reg=/[0-9a-zA-Z_]{6,16}/
+		       	if (reg.test(str)) {
+		       		$('.biaodan').find('img').eq(1).css("display","block")
+		       		arr[1]=1;
+		       	}else{
+		       		$('form').find('span').eq(4).css("display","block")
+		       	}
+       		}
+       })
+
+       	//验证码
+       $('#verify').blur(function(){
+
+       		var str=$(this).val()
+       		if (str.length==0) {
+       		    $('form').find('span').eq(6).css("display","block")
+       		}else{
+       			$('form').find('span').eq(6).css("display","none")
+          		$('.biaodan').find('img').eq(2).css("display","block")
+          		arr[2]=1;
+       		}
+       });
+
+       //console.log(arr)
+
+       //发送注册数据
+		$('#btn').click(function(){
+			//判断是否满足条件
+			 for (var i = 0; i < arr.length; i++) {
+			 	if (arr[i]==0) {
+			 		//alert(1)
+			 		return false;
+			 	}
+			 }
+
+		var ID = $('#phone').val();
+		var password = $('#password').val();
+
+		//console.log(ID+":"+password);
+
+		$.ajax({
+			url:"http://datainfo.duapp.com/shopdata/userinfo.php",
+			type:"POST",
+			data:{
+				status:"register",
+				userID:ID,
+				password:password
+			},
+			success:function(res){
+				//console.log(typeof res)
+				//console.log(res);
+				switch(res){
+					case "0":alert('已经被注册');break;
+					case "1":alert('恭喜，注册成功了！');
+
+					window.location.href="login.html"
+
+					break;
+					case "2":alert('服务器错误');break;
+
+				}
+			}
+		})
+
+
+	})////点击注册
+
+
+
+
+	})
+	</script>
+
+</head>
+<body>
+<!--                               top                                   -->
+	<div id="top">
+		<a href="index.html"><img src="../register/images/minilogo.png" alt=""></a>
+		<p>
+			<a href="login.html" style="border:none">登录</a>
+			<a href="register.html">注册</a>
+			<a href="">我的账户</a>
+			<a href="" class="help">帮助</a>
+		</p>
+	</div>
+<!--                               main                                   -->
+<div id="main">
+	<div id="img">
+		<a href=""><img src="../register/images/login.jpg" alt=""></a>
+	</div>
+	<div id="right">
+		<form action="">
+			<!-- 手机号 -->
+			<div class="biaodan">
+				<p class="">手机号：</p>
+				<input type="text" id="phone" placeholder="请输入正确的11位手机号">
+				<img src="../register/images/v.png" alt="" style="float:left">
+			</div>
+
+			<p class="prompt">
+				<span>请输入手机号码！</span>
+				<span>请输入正确的11位手机号</span>
+			</p>
+				<!--密码  -->
+			<div class="biaodan">
+				<p>密　码：</p>
+				<input type="text" id="password" placeholder="请输入密码">
+				<img src="../register/images/v.png" alt="" style="float:left">
+			</div>
+
+			<p class="prompt">
+				<span class="require">6-11个字符，可用数字、字母、下划线</span>				
+				<span>请输入密码！</span>
+				<span>密码最少6位</span>
+			</p>
+				<!--验证码  -->
+			<div class="biaodan">
+				<p>验证码：</p>
+				<input type="text" id="verify" placeholder="请输入验证码">
+			<img src="../register/images/v.png" alt="" style="float:left">
+			<img src="" alt=""><span><i>3244</i><a href="">换一张</a></span>
+			</div>
+			<p class="prompt">
+				<span>请输入验证码！</span>
+			</p>
+			<div style="margin-left:60px">
+			<p>注册即视为同意<a href="" style="color:red">《好乐买隐私协议》</a></p>
+			<!-- 按钮 -->
+			<input type="button" value="注册" id="btn">
+			</div>
+		</form>
+	</div>
+</div>
+<!--                               foot                                   -->
+<div id="foot">
+	<span>Copyright © 2007-2016 OkBuy.com All Rights Reserved           天津好乐买信息技术有限公司  津B2-20140020  京公网安备 110105006859</span>	
+</div>
+
+</body>
+</html>
